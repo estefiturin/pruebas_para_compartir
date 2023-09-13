@@ -25,7 +25,7 @@ def main():
 
     l = input("Ingresa el lenguaje separado por comas\nEjemplo 'aa,ca,de,ga,fa'\nL = ")
 
-    if all(len(s) == 2 and all(c in sigma for c in s) for s in l.split(',')):
+    if all(len(s) == 2 or 3 and all(c in sigma for c in s) for s in l.split(',')):
         l_separado = l.split(',')
         lenguaje = l_separado.copy()
         cardenalidad = [len(s) for s in l_separado]
